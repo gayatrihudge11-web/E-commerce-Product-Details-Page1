@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Detail Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- IMAGE GALLERY -->
+    <div class="gallery">
+      <img id="mainImage" src="https://picsum.photos/500/500?1" class="main-img" />
+      
+      <div class="thumbnails">
+        <img src="https://picsum.photos/500/500?1" onclick="changeImage(this)" />
+        <img src="https://picsum.photos/500/500?2" onclick="changeImage(this)" />
+        <img src="https://picsum.photos/500/500?3" onclick="changeImage(this)" />
+        <img src="https://picsum.photos/500/500?4" onclick="changeImage(this)" />
+      </div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="product-info">
+      <h1 class="title">Premium Running Shoes</h1>
+      <p class="brand">by SportX</p>
+
+      <div class="price">₹3,499 <span class="old-price">₹4,999</span></div>
+
+      <!-- COLOR VARIANTS -->
+      <div class="variant">
+        <h3>Color</h3>
+        <div class="colors">
+          <span class="color black active" onclick="selectColor(this)"></span>
+          <span class="color red" onclick="selectColor(this)"></span>
+          <span class="color blue" onclick="selectColor(this)"></span>
+        </div>
+      </div>
+
+      <!-- SIZE VARIANTS -->
+      <div class="variant">
+        <h3>Size</h3>
+        <div class="sizes">
+          <button onclick="selectSize(this)">7</button>
+          <button onclick="selectSize(this)">8</button>
+          <button onclick="selectSize(this)">9</button>
+          <button onclick="selectSize(this)">10</button>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+      <p id="cartMessage" class="cart-message"></p>
+
+      <!-- DESCRIPTION -->
+      <div class="description">
+        <h3>Product Details</h3>
+        <p>
+          Lightweight, breathable and designed for comfort. Perfect for daily
+          wear, running, and sports activities.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
